@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+.body-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-body-container {
+  /* max-height: calc(100vh - 20px); */
+  height: fit-content;
+  flex: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right-body-container {
+  /* background-color: whitesmoke; */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-group > input,
+.form-group > textarea {
+  background-color: transparent;
+  max-width: 80%;
+  border: 1px solid #734949;
+  padding: 0.75rem 0.8rem;
   color: white;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group > input:focus,
+.form-group > input:active,
+.form-group > textarea:focus,
+.form-group > textarea:active {
+  background-color: transparent;
+  max-width: 80%;
+  border: 1px solid green;
+  padding: 0.75rem 0.8rem;
+  color: white;
+  border-radius: 8px;
+  outline: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-body-container > button {
+  background-color: #734949;
+  max-width: 83%;
+  border: 1px solid #734949;
+  padding: 0.75rem 0.8rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.right-body-container > button:disabled {
+  cursor: not-allowed;
+}
+
+.car-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.single-car-container {
+  position: relative;
+  cursor: pointer;
+  transition: 1s all ease-in-out;
+  scale: 0.9;
+}
+
+.single-car-container:hover {
+  transition: 1s all ease-in-out;
+  scale: 1;
+}
+
+.single-car-container > .active {
+  color: green;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+th {
+  background-color: rgb(0, 240, 0);
+  padding: 20px 8px;
+  text-align: left;
+}
+
+td {
+  padding: 12px 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: green;
 }
