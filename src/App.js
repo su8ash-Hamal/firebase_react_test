@@ -113,7 +113,7 @@ function App() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email Address</label>
             <input name="email" id="email" />
           </div>
 
